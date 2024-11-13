@@ -2,17 +2,17 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
 # << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+## CS110 Final Project   Fall, 2024 
 
 ## Team Members
 
-<< List team member names >>
+ Michael Rullo 
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+ Multi view platformer where each view differs and offers insight on how to complete a platformer.
 
 ***    
 
@@ -30,11 +30,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1.  start menu 
+2.  moveable character 
+3.  obstacle collisions 
+4.  gravity 
+5.  multiple views of the same screen 
 
 ### Classes
 
