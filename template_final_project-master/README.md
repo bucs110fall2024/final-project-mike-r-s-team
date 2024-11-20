@@ -1,7 +1,7 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
+#  Multidimensional Platformer 
 ## CS110 Final Project   Fall, 2024 
 
 ## Team Members
