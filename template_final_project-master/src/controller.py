@@ -59,7 +59,7 @@ class Controller:
           self.sprites.update()
 
           # redraw the screen
-          self.screen.fill("purple")
+          self.screen.fill("white")
           self.sprites.draw(self.screen)
 
           pygame.display.flip()
