@@ -52,3 +52,4 @@ etc...
 - Pygame Menu
 - Requests
 - gTTS
+- openai
