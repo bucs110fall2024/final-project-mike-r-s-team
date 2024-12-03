@@ -23,14 +23,4 @@ completion = client.chat.completions.create(
         }
     ]
 )
-# messanges = [
-#     {"role" : "system", "content" : "You are a doctor-like bot that will use your knowledge of ADHD to help a patient who is communicating with you as best as you can."}
-# ]
-# while True:
-#     messange = input('User: ')
-#     if messange:
-#         completion = client.chat.completions.create(
-#             model='gpt-4o-mini',
-#             messanges.append({"role" : "user", "content" : messange}),
-        # )
 print(completion.choices[0].message)
