@@ -49,7 +49,8 @@
 etc...
 
 ## External Modules
-- Pygame Menu
-- Requests
+- pygame Menu
+- requests
 - gTTS
 - openai
+- dotenv
