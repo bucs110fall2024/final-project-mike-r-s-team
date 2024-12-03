@@ -47,3 +47,8 @@
 |  1                   | Run Counter Program  |GUI window appears with count = 0  |
 |  2                   | click count button   | display changes to count = 1      |
 etc...
+
+## External Modules
+- Pygame Menu
+- Requests
+- gTTS

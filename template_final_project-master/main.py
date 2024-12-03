@@ -1,6 +1,6 @@
 import pygame
 import requests
-from src.controller import Controlller
+from src.controller import Controller
 
 
 def main():
