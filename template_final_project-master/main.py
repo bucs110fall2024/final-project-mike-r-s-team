@@ -1,5 +1,4 @@
 import pygame
-import requests
 from src.controller import Controller
 
 
