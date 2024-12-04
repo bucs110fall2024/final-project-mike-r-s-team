@@ -1,6 +1,7 @@
 import pygame
 import pygame_menu
 from src.sprites import Sprites
+from src.chatbot import API
 
 class Controller:
     def __init__(self):
@@ -42,23 +43,30 @@ class Controller:
         self.state = 'CHAT'
     
     def chatloop(self):
-      while self.state == "CHAT":
-          for event in pygame.event.get():
-              if event.type == pygame.QUIT:
-                  self.state = 'END'
-              if event.type == pygame.KEYDOWN:
-                  if event.key == pygame.K_esc:
-                      self.state = "END"
+        self.API = API()
+        while self.state == "CHAT":
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.state = 'END'
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_esc:
+                        self.state = "END"
+                      
+        messages = self.API.messret()
+        for text in messages:
+            
+        
+    
 
-          # update all sprite data
+        # update all sprite data
         #   self.sprites.update()
 
-          # redraw the screen
-          self.screen.blit(self.background, (0, 0))
-          self.screen.blit(self.clipboard, (673, 66))
+        # redraw the screen
+        self.screen.blit(self.background, (0, 0))
+        self.screen.blit(self.clipboard, (673, 66))
         #   self.sprites.draw(self.screen)
 
-          pygame.display.flip()
+        pygame.display.flip()
     
     def endloop(self):
         pass

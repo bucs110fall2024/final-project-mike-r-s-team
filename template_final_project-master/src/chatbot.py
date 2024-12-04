@@ -8,10 +8,7 @@ class API:
         file=open(r"template_final_project-master\src\ADHD_training_set.jsonl", "rb"),
         purpose="fine-tune"
         )
-        
         self.messages = []
-        self.chat_history = None
-        self.completion = None
     
     def chist(self):
         history_file = open(r"template_final_project-master\src\chat_history.jsonl", 'r')
@@ -37,3 +34,5 @@ class API:
                 }
             ]
         )
+    def messret(self):
+        return self.messages
