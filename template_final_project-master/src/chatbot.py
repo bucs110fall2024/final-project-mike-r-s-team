@@ -14,7 +14,7 @@ class Api:
         
         completion = self.client.chat.completions.create(
             model= gpt_model,
-            messages= self.messages
+            messages= messages
         )
                 
         messages.append(

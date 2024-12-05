@@ -25,14 +25,16 @@ class Controller:
 
         user_input = st.chat_input("Ask Away (about adhd)")
         
-        if openai_api_key:
+        if len(openai_api_key) > 0:
             if model:
-                
+                api = Api(openai_api_key)
         
-        if user_input:
+            if user_input:
             
-            st.chat_message("user").markdown(user_input)
-            st.session_state.messages.append(
-                {"role" : "user", "content" : user_input}
-            )
-            
+                st.chat_message("user").markdown(user_input)
+                st.session_state.messages.append(
+                    {"role" : "user", "content" : user_input}
+                )
+                st.session_state.messages = api.chat(model, st.session_state.messages)
+                
+                st.chat_message("assistant").markdown(st.session_state.messages[-1]["content"])
