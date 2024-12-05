@@ -1,72 +1,38 @@
-import pygame
-import pygame_menu
-from src.sprites import Sprites
-from src.chatbot import API
+import streamlit as st
+from src.chatbot import Api
 
 class Controller:
-    def __init__(self):
-        self.width = 1280
-        self.height = 720
-        self.background = pygame.image.load(r"template_final_project-master\assets\CS110_Background.png")
-        self.background = pygame.transform.scale(self.background, (1280, 720))
-        self.clipboard = pygame.image.load(r"template_final_project-master\assets\CS110_ClipBoard.png")
-        self.clipboard = pygame.transform.scale(self.clipboard, (573, 587))
-        
-        pygame.init()
     
-        self.screen = pygame.display.set_mode((self.width, self.height))
+    def __init__(self):
         
-        self.state = 'START'
+        self.api = None
     
     def mainloop(self):
-        while True:
-            if self.state == 'START':
-                self.startloop()
-            elif self.state == 'CHAT':
-                self.chatloop()
-            elif self.state == 'END':
-                self.endloop()
-    
-    def startloop(self):
-        self.menu = pygame_menu.Menu('Start Screen', self.width/2, self.height/2)
-        self.menu.add.label('Click to start program', font_size= 28)
-        self.menu.add.button(
-            'Start', self.startchat, align=pygame_menu.locals.ALIGN_CENTER
-        )
         
-        while self.state == 'START':
-            self.menu.update(pygame.event.get())
-            self.menu.draw(self.screen)
-            pygame.display.flip()
-    
-    def startchat(self):
-        self.state = 'CHAT'
-    
-    def chatloop(self):
-        self.API = API()
-        while self.state == "CHAT":
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.state = 'END'
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_esc:
-                        self.state = "END"
-                      
-        messages = self.API.messret()
-        for text in messages:
+        st.title(":brain: :blue[FocusMD]")
+        st.markdown(":rainbow[Yes, this name was ai generated]")
+        st.divider()
+        
+        with st.sidebar:
+            openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+            model = st.sidebar.selectbox(label='Model', options= ['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo', 'o1-preview'])
+        
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
+
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"]): st.markdown(message["content"])
+
+        user_input = st.chat_input("Ask Away (about adhd)")
+        
+        if openai_api_key:
+            if model:
+                
+        
+        if user_input:
             
-        
-    
-
-        # update all sprite data
-        #   self.sprites.update()
-
-        # redraw the screen
-        self.screen.blit(self.background, (0, 0))
-        self.screen.blit(self.clipboard, (673, 66))
-        #   self.sprites.draw(self.screen)
-
-        pygame.display.flip()
-    
-    def endloop(self):
-        pass
+            st.chat_message("user").markdown(user_input)
+            st.session_state.messages.append(
+                {"role" : "user", "content" : user_input}
+            )
+            
