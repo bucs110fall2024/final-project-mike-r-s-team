@@ -1,13 +1,29 @@
 import streamlit as st
-from streamlit_TTS import auto_play, text_to_speech, text_to_audio
-from gtts.lang import tts_langs
+from gtts import gTTS
+import base64
+import pyttsx3
 
 class Tts:
     
     def __init__(self):
+        self.engine = pyttsx3.init()
         pass
     
-    def texttospeech(self, messages, lang = 'en'):
-        for phrase in messages[-2:]:
-            audio = text_to_audio(phrase, language= lang)
-            auto_play(audio)
+    # def texttoaudio(self, messages, language):
+    #     i = 1
+    #     for phrase in messages[-2:]:
+    #         audio = gTTS(phrase, lang= language, slow= False)
+    #         audio.save(f'audio{i}')
+    #         i += 1
+    
+    # def playaudio(self):
+    #     for iterable in range(1, 3, 1):
+    #         with open(f'audio{iterable}', 'rb') as f:
+    #             data = f.read()
+    #             b64 = base64.b64encode(data).decode()
+    #             autoplay_audio("local_audio.mp3")
+    
+    def texttospeech(self, messages):
+        phrase = messages[-1]["content"]
+        self.engine.say(phrase)
+        self.engine.runAndWait()

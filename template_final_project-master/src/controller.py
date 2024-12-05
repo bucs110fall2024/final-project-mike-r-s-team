@@ -42,9 +42,15 @@ class Controller:
                 st.session_state.messages.append(
                     {"role" : "user", "content" : user_input}
                 )
+                if tts_switch:
+                    self.tts.texttospeech(st.session_state.messages)
+                
                 st.session_state.messages = api.chat(model, st.session_state.messages)
                 
                 st.chat_message("assistant").markdown(st.session_state.messages[-1]["content"])
+                
+                if tts_switch:
+                    self.tts.texttospeech(st.session_state.messages)
             
-        if tts_switch:
-            self.tts.texttospeech(st.session_state.messages, st.session_state.language)
+        # if tts_switch:
+        #     self.tts.texttospeech(st.session_state.messages, st.session_state.language)

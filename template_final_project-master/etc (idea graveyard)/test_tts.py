@@ -7,7 +7,7 @@ language = 'en'
 
 myobj = gTTS(text = mytext, lang = language, slow = False)
 
-myobj.save('welcome.ogg')
+myobj.save('speechfromtext.mp3')
 
 pygame.init()
 pygame.mixer.init()
