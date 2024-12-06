@@ -19,12 +19,12 @@
 ## GUI Design
 
 ### Initial Design
-
+- Switched project so initial design was deleted
 ![initial gui](assets/gui.jpg)
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+![final gui](assets/finalgui.png)
 
 ## Program Design
 
@@ -38,7 +38,10 @@
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+- Controller
+    - controls the Api class and handles the graphical processes
+- Api
+    - Takes user input and returns the ai assistants message
 
 ## ATP
 1. Menu Navigation
@@ -47,11 +50,10 @@
 |----------------------|:--------------------:|----------------------------------:|
 |  1                   | run the gui/website  | website/gui opens                 |
 |  2                   | click on the api box | api key box opens for input       |
-|  3                   | enter any string     | api key box recieves the string   |
-|  4                   | veify outcome        | error message in main terminal    |
-|                      |                      | can be fixed immediately(no crash)|
+|  3                   | select a language    | language drop down for selection  |
+|  4                   | select a model       | model drop down for selection     |
 
-1. Error Handling
+2. Error Handling
     - Verify that the program handles incorrect apis (the only possible error to the best of my knowledge)
 | Step                 |Procedure             |Expected Results                   |
 |----------------------|:--------------------:|----------------------------------:|
@@ -60,6 +62,38 @@
 |  3                   | enter any string     | api key box recieves the string   |
 |  4                   | veify outcome        | error message in main terminal    |
 |                      |                      | can be fixed immediately(no crash)|
+
+3. Model Changing
+    - Verify that the api model can be switched
+| Step                 |Procedure                 |Expected Results                   |
+|----------------------|:--------------------:    |----------------------------------:|
+|  1                   | run the gui/website      | website/gui opens                 |
+|  2                   | click on the api box     | api key box opens for input       |
+|  3                   | enter a valid api key    | api key works; no error           |
+|  4                   | ask the api for its model| assistant tells its running model |
+|  5                   | switch the model         | model switches                    |
+|  6                   | ask the api for its model| assistant tells diff running model|
+
+4. Language Changing
+    - Verify that the api language can be changed
+| Step                 |Procedure                 |Expected Results                   |
+|----------------------|:--------------------:    |----------------------------------:|
+|  1                   | run the gui/website      | website/gui opens                 |
+|  2                   | click on the api box     | api key box opens for input       |
+|  3                   | enter a valid api key    | api key works; no error           |
+|  4                   | message the api          | assistant responds in english     |
+|  5                   | open the language box    | language box opens                |
+|  6                   | select a different lang  | language selection changes        |
+|  7                   | message the api          | assistant responds in diff lang   |
+
+5. Model Responds
+    - Verify that the api model responds accurately
+| Step                 |Procedure                 |Expected Results                   |
+|----------------------|:--------------------:    |----------------------------------:|
+|  1                   | run the gui/website      | website/gui opens                 |
+|  2                   | click on the api box     | api key box opens for input       |
+|  3                   | enter a valid api key    | api key works; no error           |
+|  4                   | message the api          | assistant responds to inquiry     |
 
 ## External Modules
 - openai
