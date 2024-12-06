@@ -1,5 +1,2 @@
 openai
 streamlit
-streamlit_TTS
-gtts
-pyttsx3
