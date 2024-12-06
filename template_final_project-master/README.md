@@ -2,7 +2,15 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
 #  ADHD Assistant 
-## CS110 Final Project   Fall, 2024 
+## CS110 Final Project   Fall, 2024
+
+## Notes:
+ - I uploaded the website to streamlit.io as the url: https://cs110-finalproject-by-michaelrullo.streamlit.app/
+ - This was uploaded and can be altered via my github repository found here: https://github.com/Michael-Rullo/portfolio_projects/tree/main/adhd_chatbot
+ - Due to installation errors (2 python installations not on PATH) it was difficult to test the code in this repo
+ - If this code is nonfunctioning for any reason (it shouldn't be, this and the other repo are identical with just a few changes for uploading online)
+ - Please feel free to use the website provided and the repo provided
+ - However, I am confident that this code is functioning, I was just unable to test it (tested the other repo and would copy code over)
 
 ## Team Members
 
