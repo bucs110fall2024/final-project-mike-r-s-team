@@ -8,6 +8,11 @@ class Controller:
         self.api = None
     
     def mainloop(self):
+        '''
+        controls the loop for graphics and outsourcing other processes to other classes or functions
+        args: (type) description
+        return: (type) description
+        '''
         
         st.title(":brain: :blue[FocusMD]")
         st.markdown(":rainbow[Yes, this name was ai generated]")

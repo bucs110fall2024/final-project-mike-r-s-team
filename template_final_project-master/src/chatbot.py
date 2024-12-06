@@ -11,6 +11,12 @@ class Api:
         )
     
     def chat(self, gpt_model, messages):
+        '''
+        takes in a list of dictionaries, which are lines from conversation, and returns the openai api's response as a part of the list
+        args:       gpt_model   (str)   tells the api which ai model to use to respond to the user
+                    messages    (list)  a list of dictionaries which are the lines of conversation between user and api
+        return:     messages    (list)  a list of dictionaries which are the lines of conversation between user and api
+        '''
         
         completion = self.client.chat.completions.create(
             model= gpt_model,
