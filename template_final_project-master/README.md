@@ -44,7 +44,7 @@
 2.  changable models
 3.  chat history 
 4.  trained model
-5.  accurate chat
+5.  language selection
 
 ### Classes
 
