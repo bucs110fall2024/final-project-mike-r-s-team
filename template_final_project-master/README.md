@@ -5,6 +5,8 @@
 ## CS110 Final Project   Fall, 2024
 
 ## Notes:
+- edit based on text below, this repository's main file will run based on this command:py -m streamlit run "c:/Users/micha/OneDrive/Desktop/CS 110/final-project-mike-r-s-team/template_final_project-master/main.py"
+- However I understand that this shoudln't be an issue for the grader like it was for me
  - I uploaded the website to streamlit.io as the url: https://cs110-finalproject-by-michaelrullo.streamlit.app/
  - This was uploaded and can be altered via my github repository found here: https://github.com/Michael-Rullo/portfolio_projects/tree/main/adhd_chatbot
  - Due to installation errors (2 python installations not on PATH) it was difficult to test the code in this repo
